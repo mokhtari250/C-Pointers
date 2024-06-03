@@ -1,0 +1,45 @@
+// ptrExperiments.cpp
+// Initial experiments with pointers
+// By Mehdi Mokhtari
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int v, *ptr;
+    double x, *y;
+
+    ptr = &v;
+    y = &x;
+
+    v = 5;
+    x = 1.2;
+
+    cout << &ptr << endl;
+    cout << ptr << endl;
+    cout << *ptr << endl;
+    cout << &y << endl;
+    cout << y << endl;
+    cout << *y << endl;
+
+    *ptr = 7;
+    cout << v << endl;
+
+    double scoreArray[10];
+    cout << scoreArray << endl;
+    double *scorePtr = scoreArray;
+    *scorePtr = 10;
+    scoreArray[1] = 12;
+    scorePtr[2] = 11;
+    *(scoreArray + 3) = 40;
+
+    for (int i = 0; 1 < 4; i++)
+    {
+        cout << i << ": " << scoreArray[i] << " at " << scoreArray+i << "\n";
+    }
+}
+
+/*
+
+*/
